@@ -9,6 +9,9 @@ export default function Home() {
       <Link href="/helloworld" className="hover:text-neutral-500">
         01. Hello World
       </Link>
+      <Link href="/counter" className="hover:text-neutral-500">
+        02. Counter
+      </Link>
     </div>
   );
 }
