@@ -1,6 +1,6 @@
 import { Props } from "../types";
 import { memo } from "react";
-export const SecondaryButton = memo((props: Props) => {
+export const SecondaryButtonComponent = (props: Props) => {
   const { children, handleReset } = props;
   return (
     <button
@@ -10,4 +10,7 @@ export const SecondaryButton = memo((props: Props) => {
       <p className="w-18"> {children}</p>
     </button>
   );
-});
+};
+
+export const SecondaryButton = memo(SecondaryButtonComponent);
+SecondaryButton.displayName = "SecondaryButton";

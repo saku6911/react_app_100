@@ -1,7 +1,7 @@
 import { Props } from "../types";
 import { memo } from "react";
 
-export const PrimaryButton = memo((props: Props) => {
+const PrimaryButtonComponent = (props: Props) => {
   const { children, handleStart } = props;
   return (
     <button
@@ -11,4 +11,7 @@ export const PrimaryButton = memo((props: Props) => {
       <p className="w-18"> {children}</p>
     </button>
   );
-});
+};
+
+export const PrimaryButton = memo(PrimaryButtonComponent);
+PrimaryButton.displayName = "PrimaryButton";
