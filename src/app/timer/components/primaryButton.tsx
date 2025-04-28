@@ -1,5 +1,7 @@
 import { Props } from "../types";
-export default function PrimaryButton(props: Props) {
+import { memo } from "react";
+
+export const PrimaryButton = memo((props: Props) => {
   const { children, handleStart } = props;
   return (
     <button
@@ -9,4 +11,4 @@ export default function PrimaryButton(props: Props) {
       <p className="w-18"> {children}</p>
     </button>
   );
-}
+});

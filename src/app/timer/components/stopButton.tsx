@@ -1,5 +1,6 @@
 import { Props } from "../types";
-export default function StopButton(props: Props) {
+import { memo } from "react";
+export const StopButton = memo((props: Props) => {
   const { children, handleStop } = props;
   return (
     <button
@@ -9,4 +10,4 @@ export default function StopButton(props: Props) {
       <p className="w-18"> {children}</p>
     </button>
   );
-}
+});

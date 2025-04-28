@@ -1,7 +1,7 @@
 "use client";
 
 import { useAtom } from "jotai";
-import PrimaryButton from "./components/primaryButton";
+import { PrimaryButton } from "./components/primaryButton";
 import { minutesAtom, secondsAtom, startTimer, timerActive } from "./atom";
 import { useState } from "react";
 

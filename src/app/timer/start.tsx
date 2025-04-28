@@ -1,4 +1,4 @@
-import SecondaryButton from "./components/secondaryButton";
+import { SecondaryButton } from "./components/secondaryButton";
 import {
   hasPlayed,
   minutesAtom,
@@ -8,8 +8,8 @@ import {
 } from "./atom";
 import { useAtom } from "jotai";
 import { useEffect, useState } from "react";
-import StopButton from "./components/stopButton";
-import PrimaryButton from "./components/primaryButton";
+import { StopButton } from "./components/stopButton";
+import { PrimaryButton } from "./components/primaryButton";
 import useSound from "use-sound";
 
 export default function Start() {
