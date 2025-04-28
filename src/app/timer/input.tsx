@@ -1,9 +1,9 @@
 "use client";
 
 import { useAtom } from "jotai";
-import { PrimaryButton } from "./components/primaryButton";
+import PrimaryButton from "./components/primaryButton";
 import { minutesAtom, secondsAtom, startTimer, timerActive } from "./atom";
-import { useState } from "react";
+import { memo, useState } from "react";
 
 export default function Input() {
   const [minutes, setMinutes] = useAtom(minutesAtom);
@@ -41,7 +41,10 @@ export default function Input() {
       setSeconds(value);
     }
   };
-
+  const PrimaryButtonMemo = memo(() => (
+    <PrimaryButton handleStart={handleStart}>スタート</PrimaryButton>
+  ));
+  PrimaryButtonMemo.displayName = "PrimaryButtonMemo";
   return (
     <div className="flex flex-col gap-25 items-center">
       <div className="flex gap-2 font-bold text-3xl">
@@ -69,7 +72,7 @@ export default function Input() {
         </div>
       </div>
       {error && <p className="text-red-500 mt-2">{error}</p>}
-      <PrimaryButton handleStart={handleStart}>スタート</PrimaryButton>
+      <PrimaryButtonMemo />
     </div>
   );
 }

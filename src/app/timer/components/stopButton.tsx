@@ -1,6 +1,5 @@
 import { Props } from "../types";
-import { memo } from "react";
-export const StopButtonComponent = (props: Props) => {
+export default function StopButton(props: Props) {
   const { children, handleStop } = props;
   return (
     <button
@@ -10,7 +9,4 @@ export const StopButtonComponent = (props: Props) => {
       <p className="w-18"> {children}</p>
     </button>
   );
-};
-
-export const StopButton = memo(StopButtonComponent);
-StopButton.displayName = "StopButton";
+}

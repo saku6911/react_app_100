@@ -1,4 +1,4 @@
-import { SecondaryButton } from "./components/secondaryButton";
+import SecondaryButton from "./components/secondaryButton";
 import {
   hasPlayed,
   minutesAtom,
@@ -7,9 +7,9 @@ import {
   timerActive,
 } from "./atom";
 import { useAtom } from "jotai";
-import { useEffect, useState } from "react";
-import { StopButton } from "./components/stopButton";
-import { PrimaryButton } from "./components/primaryButton";
+import { memo, useEffect, useState } from "react";
+import StopButton from "./components/stopButton";
+import PrimaryButton from "./components/primaryButton";
 import useSound from "use-sound";
 
 export default function Start() {
@@ -68,16 +68,24 @@ export default function Start() {
     setStart(true);
   };
 
+  const SecondaryButtonMemo = memo(() => (
+    <SecondaryButton handleReset={handleReset}>リセット</SecondaryButton>
+  ));
+  SecondaryButtonMemo.displayName = "SecondaryButtonMemo";
+  const StopButtonButtonMemo = memo(() => (
+    <StopButton handleStop={handleStop}>一時停止</StopButton>
+  ));
+  StopButtonButtonMemo.displayName = "StopButtonButtonMemo";
+  const PrimaryButtonMemo = memo(() => (
+    <PrimaryButton handleStart={handleStart}>再開</PrimaryButton>
+  ));
+  PrimaryButtonMemo.displayName = "PrimaryButtonMemo";
   return (
     <div className="flex flex-col gap-25">
       <h2 className="text-4xl font-bold text-center">{totalSeconds}</h2>
       <div className="flex gap-10">
-        <SecondaryButton handleReset={handleReset}>リセット</SecondaryButton>
-        {start == true ? (
-          <StopButton handleStop={handleStop}>一時停止</StopButton>
-        ) : (
-          <PrimaryButton handleStart={handleStart}>再開</PrimaryButton>
-        )}
+        <SecondaryButtonMemo />
+        {start == true ? <StopButtonButtonMemo /> : <PrimaryButtonMemo />}
       </div>
     </div>
   );
