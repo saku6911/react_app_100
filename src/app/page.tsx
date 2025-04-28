@@ -15,6 +15,9 @@ export default function Home() {
       <Link href="/todo" className="hover:text-neutral-500">
         03. Todo
       </Link>
+      <Link href="/timer" className="hover:text-neutral-500">
+        04. Timer
+      </Link>
     </div>
   );
 }

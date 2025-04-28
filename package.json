@@ -9,10 +9,12 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "jotai": "^2.12.3",
     "next": "15.3.1",
     "postcss": "^8.5.3",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "use-sound": "^5.0.0"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
