@@ -18,6 +18,9 @@ export default function Home() {
       <Link href="/timer" className="hover:text-neutral-500">
         04. Timer
       </Link>
+      <Link href="/calc" className="hover:text-neutral-500">
+        05. Calc
+      </Link>
     </div>
   );
 }
