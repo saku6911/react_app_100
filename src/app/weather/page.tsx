@@ -38,6 +38,7 @@ export default function Weather() {
             <img
               src={firstForecast.image.url}
               alt={firstForecast.image.title}
+              loading="lazy"
               className="mx-auto pb-2 w-45"
             />
             <h2 className="text-xl font-semibold pb-1">

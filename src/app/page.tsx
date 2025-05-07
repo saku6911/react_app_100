@@ -27,6 +27,9 @@ export default function Home() {
       <Link href="/weather" className="hover:text-neutral-500">
         07. Weather
       </Link>
+      <Link href="/calendar" className="hover:text-neutral-500">
+        08. Calendar
+      </Link>
     </div>
   );
 }
