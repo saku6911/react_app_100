@@ -33,6 +33,9 @@ export default function Home() {
       <Link href="/memo" className="hover:text-neutral-500">
         09. Memo
       </Link>
+      <Link href="/navigation" className="hover:text-neutral-500">
+        10. Navigation
+      </Link>
     </div>
   );
 }
