@@ -36,6 +36,9 @@ export default function Home() {
       <Link href="/navigation" className="hover:text-neutral-500">
         10. Navigation
       </Link>
+      <Link href="/quizz" className="hover:text-neutral-500">
+        11. Quizz
+      </Link>
     </div>
   );
 }
