@@ -23,7 +23,7 @@ export default function QuizzPage() {
   const handleSubmit = () => {
     if (isSubmitted) return;
 
-    if (answer.trim() === "オクラ" || "おくら") {
+    if (["オクラ", "おくら"].includes(answer.trim())) {
       const timeTaken = totalTime - timeLeft;
       setResult(`正解！（${timeTaken}秒で解答）`);
     } else {
