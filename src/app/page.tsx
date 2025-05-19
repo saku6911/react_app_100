@@ -39,6 +39,9 @@ export default function Home() {
       <Link href="/quizz" className="hover:text-neutral-500">
         11. Quizz
       </Link>
+      <Link href="/clock" className="hover:text-neutral-500">
+        12. Clock
+      </Link>
     </div>
   );
 }
