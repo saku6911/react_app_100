@@ -42,6 +42,9 @@ export default function Home() {
       <Link href="/clock" className="hover:text-neutral-500">
         12. Clock
       </Link>
+      <Link href="/slider" className="hover:text-neutral-500">
+        13. Slider
+      </Link>
     </div>
   );
 }
